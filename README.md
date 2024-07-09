@@ -8,33 +8,24 @@ www.dio.me
 ## Descrição
 Você está desenvolvendo um programa simples em Java para simular operações bancárias básicas. A aplicação deve permitir ao usuário realizar depósitos, saques e consultar o saldo em uma conta bancária virtual.
 
+## Descrição
+Você está desenvolvendo um programa simples em Java para verificar se um número de conta bancária é válido. O número da conta deve ter exatamente 8 dígitos.
+
+
 ## Entrada
 
 
-* O programa exibirá um menu com as seguintes opções:
+* O programa solicitará ao usuário que digite o número da conta bancária.
 
-Depositar
-Sacar
-Consultar Saldo
-Encerrar
-* O usuário escolherá uma dessas opções digitando o número correspondente.
 
 ## Saída
 
-* Utilizando um switch, o programa realizará a operação escolhida pelo usuário.
-* Se o usuário escolher:
- 
-   º 1: O programa solicitará o valor a ser depositado e atualizará o saldo. Além disso, deve imprimir o saldo atual com a mensagem "Saldo atual: {saldo com 1 casa decimal}".
-  
-   º 2: O programa solicitará o valor a ser sacado e verificará se há saldo suficiente. Sendo assim, deve imprimir "Saldo atual: {saldo com 1 casa decimal}" quando o saldo for suficiente e "Saldo insuficiente."
+* O programa utilizará um bloco try-catch para verificar se o número da conta possui exatamente 8 dígitos.
 
-   º 3: O programa apenas exibirá o saldo atual da conta: "Saldo atual: {saldo com 1 casa decimal}".
-
-   º 0: O programa encerrará, imprimindo "Programa encerrado.".
-
+* Se o número da conta tiver 8 dígitos, o programa informará que é um número válido.
+* Se o número da conta não tiver 8 dígitos, o programa lançará uma exceção (por exemplo, IllegalArgumentException) e informará que o número da conta é inválido.
   
 ## Exemplos
-A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
 A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
 <table>
   <thead>
@@ -45,38 +36,19 @@ A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectiva
   </thead>
   <tbody align="left">
     <tr>
-      <td>
-        1      
-        50      
-        2 
-        100 
-        0
+      <td>01020304
       </td>
-      <td>Saldo atual: 50.0
-Saldo insuficiente.
-Programa encerrado.
+      <td>Numero de conta valido.
       </td>
     </tr>
     <tr>
-      <td>3
-          1
-          550 
-          0
+      <td>1234568
       </td>
-      <td>Saldo atual: 0.0
-Saldo atual: 550.0
-Programa encerrado.</td>
+      <td>Erro: Numero de conta invalido. Digite exatamente 8 digitos.</td>
     </tr>
     <tr>
-      <td>1
-          1000
-          2
-          500
-          0
-</td>
-      <td>Saldo atual: 1000.0
-Saldo atual: 500.0
-Programa encerrado.</td>   
+      <td>3231</td>
+      <td>Erro: Numero de conta invalido. Digite exatamente 8 digitos.</td>   
     </tr>
   </tbody>
   <tfoot></tfoot>
